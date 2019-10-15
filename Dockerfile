@@ -20,6 +20,7 @@ RUN chmod 775 setup.sh
 
 RUN /postunpack.sh
 ENV BITNAMI_APP_NAME="zookeeper" \
+    ALLOW_ANONYMOUS_LOGIN="yes" \
     BITNAMI_IMAGE_VERSION="3.5.5-debian-9-r130" \
     NAMI_PREFIX="/.nami" \
     PATH="/opt/bitnami/java/bin:/opt/bitnami/zookeeper/bin:$PATH"
