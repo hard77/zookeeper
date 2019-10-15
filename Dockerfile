@@ -13,6 +13,11 @@ RUN . ./libcomponent.sh && component_unpack "java" "1.8.222-1" --checksum 373c9f
 RUN . ./libcomponent.sh && component_unpack "zookeeper" "3.5.5-6" --checksum d9bf2738bc9d33801cd828ba1d7df2799352fe9083e165278fd83c22ebe540fa
 
 COPY rootfs /
+RUN chmod 775 postunpack.sh
+RUN chmod 775 entrypoint.sh
+RUN chmod 775 run.sh
+RUN chmod 775 setup.sh
+
 RUN /postunpack.sh
 ENV BITNAMI_APP_NAME="zookeeper" \
     BITNAMI_IMAGE_VERSION="3.5.5-debian-9-r130" \
