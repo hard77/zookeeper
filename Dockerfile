@@ -1,4 +1,4 @@
-FROM bitnami/minideb-extras-base:latest
+FROM bitnami/minideb-extras-base:stretch
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 ENV BITNAMI_PKG_CHMOD="-R g+rwX" \
